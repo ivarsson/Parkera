@@ -95,6 +95,16 @@
 	<div data-role="page" id="confirmMobile">
 		<?php include 'confirmMobile.php'; ?>
 	</div>
+	
+	<!--Confirm paper-->
+	<div data-role="page" id="confirmPaper">
+		<?php include 'confirmPaper.php'; ?>
+	</div>
+	
+	<!--Public transport-->
+	<div data-role="page" id="publicTrans">
+		<?php include 'publicTrans.php'; ?>
+	</div>
 
 </body>
 

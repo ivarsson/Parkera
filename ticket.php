@@ -12,7 +12,7 @@
 <div id="main">
 		<h1>Tryck på det biljettalternativ du önskar</h1>
 
-	<a href="#confirmPaper" class="button" style="background-image:url('images/paperTicket.png'); repeat:none;" onClick="window.location.reload()" data-role="button">Pappersbiljett</a>
+	<a href="#confirmPaper" class="button" style="background-image:url('images/paperTicket.png'); repeat:none;"  data-role="button">Pappersbiljett</a>
 		<a href="#confirmMobile" class="button" style="background-image:url('images/smsTicket.png'); repeat:none;" data-role="button">SMS-biljett</a>
 
 </div>
