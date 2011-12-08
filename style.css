@@ -1,0 +1,135 @@
+/*******************
+
+Grupp 12 2011
+TIG061 - Projekt 2
+
+*******************/
+body {
+
+}
+h1 {
+	margin-left:0 auto;
+	text-align:center;
+}
+
+#pay input {
+	font-size:50px;
+	background:transparent;
+	border:none;
+}
+
+#pay label {
+	font-size:50px;
+	background:transparent;
+	border:none;
+}
+
+#hoursMinTable {
+	width:950px;
+	margin-left: 10%;
+}
+
+#hoursMinTable tr {
+	margin-top:100px;
+	height:100px;
+}
+
+.headerTd {
+	width:200px;
+}
+
+#totalSum {
+	margin-left:10%;
+}
+
+#totalSum input {
+	width:90px;
+}
+
+#totalSum span {
+	font-size: 50px;
+}
+
+.button {
+	height: 200px;
+	width: 350px;
+	float:left;
+	margin: 20px;
+	border-radius:15px;
+	border: 1px solid black;
+	background: #ffffff;
+	padding:5px;
+}
+
+.mobileTicket {
+	height: 350px;
+	width: 350px;
+	float:left;
+	margin: 20px;
+	border-radius:15px;
+	border: 1px solid black;
+	background: #ffffff;
+	padding:5px;
+}
+
+.mobileTicket input {
+	width:330px;
+	height:45px;
+	font-size:40px;
+	padding:5px;
+	margin: 0 auto;
+}
+
+#main {
+	margin-left:10%;
+	text-align:center;
+}
+
+#progressBar {
+	height:30px;
+	width:100%;
+	margin-bottom:10px;
+	text-shadow: none;
+}
+
+#progressBar span {
+	width: 256px;
+	float:left;
+	text-align:center;
+	font-family: Tahoma;
+	text-transform: uppercase;
+}
+
+.inactive {
+	background: Red;
+	opacity:0.6;
+}
+
+.active {
+	background: Orange;
+	font-weight:bold;
+}
+
+.done {
+	background: Green;
+	opacity:0.6;
+}
+
+.forward {
+	float:right;
+	border: 1px solid 		#222 /*{a-bup-border}*/;
+	background: 			#333333 /*{a-bup-background-color}*/;
+	font-weight: bold;
+	color: 					#ffffff /*{a-bup-color}*/;
+	text-shadow: 0 /*{a-bup-shadow-x}*/ -1px /*{a-bup-shadow-y}*/ 1px /*{a-bup-shadow-radius}*/ #000 /*{a-bup-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #555 /*{a-bup-background-start}*/), to( #333 /*{a-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(#44A44F /*{a-bup-background-start}*/, #33CC45 /*{a-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient(#44A44F /*{a-bup-background-start}*/, #33CC45 /*{a-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient(#44A44F /*{a-bup-background-start}*/, #33CC45 /*{a-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient(#44A44F /*{a-bup-background-start}*/, #33CC45 /*{a-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient(#44A44F /*{a-bup-background-start}*/, #33CC45 /*{a-bup-background-end}*/);
+}
+
+.back {
+	float:left;
+}
