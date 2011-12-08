@@ -28,6 +28,14 @@
 		<label for="price">Pris: </label>
 		<input type="text" name="price" id="price" />
 	</div>
+	
+	<div class="button" data-role="button">
+		Sätt in betalkort
+	</div>
+	
+	<div class="button" data-role="button">
+		KÖÖÖÖÖÖÖP!!!!!1
+	</div>
 
 
 
@@ -35,6 +43,6 @@
 
 <div data-role="footer" data-theme="a">
 	<p>
-		<a class="back" onClick="window.location.reload()" href="#ticket" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
+		<a class="back" href="#ticket" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
 	</p>
 </div>
