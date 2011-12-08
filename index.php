@@ -90,6 +90,11 @@
 	<div data-role="page" id="ticket">
 		<?php include 'ticket.php'; ?>
 	</div>
+	
+	<!--Confirm mobile-->
+	<div data-role="page" id="confirmMobile">
+		<?php include 'confirmMobile.php'; ?>
+	</div>
 
 </body>
 

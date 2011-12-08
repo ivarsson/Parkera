@@ -9,7 +9,7 @@
 	<span class="inactive">4. Bekräfta</span>
 </div>
 
-	<div id="main">
+<div id="main">
 		<h1>Tryck på det biljettalternativ du önskar</h1>
 
 	<a href="#confirmPaper" class="button" style="background-image:url('images/paperTicket.png'); repeat:none;" onClick="window.location.reload()" data-role="button">Pappersbiljett</a>
