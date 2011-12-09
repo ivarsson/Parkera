@@ -13,6 +13,12 @@
 	<script type="text/javascript" src="maps.js"></script>
 	<script type="text/javascript" charset="utf-8">
 	
+	$.mobile.fixedToolbars
+	   .setTouchToggleEnabled(false);
+	
+	$.mobile.fixedToolbars
+	   .show(true);
+	
 	var timeStore = {
         h:     undefined,
         m:     undefined,
