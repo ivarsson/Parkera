@@ -12,8 +12,8 @@
 <div id="main">
 	<h1>Bekräfta</h1>
 	
-	<div class="button" data-role="button">
-		Sätt in betalkort
+	<div class="button">
+		<h2>Du har valt pappersbiljett</h2>
 	</div>
 	
 	<div class="button">
@@ -22,6 +22,10 @@
 		<br />
 		<label for="price">Pris: </label>
 		<input type="text" name="price" id="price" />
+	</div>
+	
+	<div class="button" data-role="button">
+		Sätt in betalkort
 	</div>
 	
 	<div class="button" data-role="button">
