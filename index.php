@@ -53,12 +53,12 @@
 	
 	<!-- Start of first page: #start -->
 	<div data-role="page" id="start">
-
+		
 		<div data-role="header">
 			<h1>P-automat</h1>
 		</div><!-- /header -->
 		
-		<div data-role="content">
+		<div data-role="content" id="main">
 
 			<h1>Välkommen, välj ett alternativ</h1>
 
@@ -72,7 +72,7 @@
 
 		</div>
 		
-		<div data-role="footer">
+		<div data-role="footer" data-position="fixed">
 			<h4>Välkommen</h4>
 		</div><!-- /footer -->
 	</div>

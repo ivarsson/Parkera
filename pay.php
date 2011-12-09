@@ -38,7 +38,7 @@
 </div>
 
 
-<div data-role="footer" data-theme="a">
+<div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
 		<a class="back" href="#start" onClick="window.location.reload()" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
 		<a class="forward" href="#ticket" onClick="window.location.reload()" data-rel="forward" data-role="button" data-inline="true" data-icon="forward">Nästa</a>

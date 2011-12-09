@@ -41,7 +41,7 @@
 
 </div>
 
-<div data-role="footer" data-theme="a">
+<div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
 		<a class="back" href="#ticket" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
 	</p>
