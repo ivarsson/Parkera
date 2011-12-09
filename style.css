@@ -34,6 +34,10 @@ h1 {
 	height:100px;
 }
 
+#header img {
+	margin-left:5px;
+}
+
 .headerTd {
 	width:200px;
 }

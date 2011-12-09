@@ -60,8 +60,8 @@
 	<!-- Start of first page: #start -->
 	<div data-role="page" id="start">
 		
-		<div data-role="header">
-			<h1>P-automat</h1>
+		<div data-role="header" id="header">
+			<div style="float:right; margin-right:10px; padding:5px;"><a href="#noFunction" data-rel="dialog" data-transition="slidedown"><img src="images/swe.png"><img src="images/de.png"><img src="images/uk.png"></a></div>
 		</div><!-- /header -->
 		
 		<div data-role="content" id="main">
@@ -111,6 +111,14 @@
 	<!--Public transport-->
 	<div data-role="page" id="publicTrans">
 		<?php include 'publicTrans.php'; ?>
+	</div>
+	
+	<div data-role="page" id="noFunction">
+		<div data-role="header" data-theme="a">Inte klart än...</div>
+		<div data-role="content">Denna funktion är fortfarande under utveckling!</div>
+		<div data-role="footer"><a href="#start" data-rel="back" data-role="button" data-inline="true" data-icon="delete">Stäng</a>
+			</div>
+
 	</div>
 
 </body>
