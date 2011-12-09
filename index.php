@@ -2,7 +2,7 @@
 <html> 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, ser-scalable = no">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable = no">
 	<meta name="apple-mobile-web-app-capable" content="yes" /> 
 	<title>P-automat</title> 
 	<link rel="stylesheet" href="jqueryMobile.css" />
@@ -12,6 +12,30 @@
 	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 	<script type="text/javascript" src="maps.js"></script>
 	<script type="text/javascript" charset="utf-8">
+	
+	(function() {
+	        var fixgeometry = function() {
+	          /* Some orientation changes leave the scroll position at something
+	           * that isn't 0,0. This is annoying for user experience. */
+	          scroll(0, 0);
+
+	          /* Calculate the geometry that our content area should take */
+	          var header = $(".header:visible");
+	          var footer = $(".footer:visible");
+	          var content = $(".content:visible");
+	          var viewport_height = $(window).height();
+
+	          var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
+
+	          /* Trim margin/border/padding height */
+	          content_height -= (content.outerHeight() - content.height());
+	          content.height(content_height);
+	        }; /* fixgeometry */
+
+	        $(document).ready(function() {
+	          $(window).bind("orientationchange resize pageshow", fixgeometry);
+	        });
+	      })();
 	
 	var timeStore = {
         h:     undefined,
@@ -58,7 +82,7 @@
 			<h1>P-automat</h1>
 		</div><!-- /header -->
 		
-		<div data-role="content" id="main">
+		<div data-role="content">
 
 			<h1>Välkommen, välj ett alternativ</h1>
 
