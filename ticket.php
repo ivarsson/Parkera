@@ -13,13 +13,12 @@
 		<h1>Tryck på det biljettalternativ du önskar</h1>
 
 	<a href="#confirmPaper" class="button" style="background-image:url('images/paperTicket.png'); repeat:none;"  data-role="button">Pappersbiljett</a>
-		<a href="#confirmMobile" class="button" style="background-image:url('images/smsTicket.png'); repeat:none;" data-role="button">SMS-biljett</a>
+		<a href="#insertCardMobile" class="button" style="background-image:url('images/smsTicket.png'); repeat:none;" data-role="button" data-rel="dialog" data-transition="slidedown">SMS-biljett</a>
 
 </div>
 
 <div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
 		<a class="back" onClick="window.location.reload()" href="#pay" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
-
 	</p>
 </div>

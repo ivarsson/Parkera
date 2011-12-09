@@ -113,11 +113,18 @@
 		<?php include 'publicTrans.php'; ?>
 	</div>
 	
+	<!--No function-->
 	<div data-role="page" id="noFunction">
 		<div data-role="header" data-theme="a">Inte klart än...</div>
 		<div data-role="content">Denna funktion är fortfarande under utveckling!</div>
-		<div data-role="footer"><a href="#start" data-rel="back" data-role="button" data-inline="true" data-icon="delete">Stäng</a>
-			</div>
+		<div data-role="footer"><a href="#start" data-rel="back" data-role="button" data-inline="true" data-icon="delete">Stäng</a></div>
+	</div>
+	
+	<div data-role="page" id="insertCardMobile">
+		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
+		<div data-role="content"><a href="#confirmMobile" data-role="button" data-icon="delete">Sätt in kort!</a></div>
+		<div data-role="footer"><a href="#start" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
+	</div>
 
 	</div>
 
