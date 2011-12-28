@@ -1,5 +1,5 @@
 <div data-role="header" data-theme="a">
-	<h1>Närmaste hållplatser</h1>
+	<h1>Kommande avgångar vid Lindholmen</h1>
 </div>
 
 <iframe src="http://lindholmen.heroku.com/" width="100%" height="686px"></iframe>

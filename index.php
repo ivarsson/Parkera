@@ -61,7 +61,7 @@
 	<div data-role="page" id="start">
 		
 		<div data-role="header" id="header">
-			<div style="float:right; margin-right:10px; padding:5px;"><a href="#noFunction" data-rel="dialog" data-transition="slidedown"><img src="images/swe.png"><img src="images/de.png"><img src="images/uk.png"></a></div>
+			<div id="langBar"><a href="#noFunction" data-rel="dialog" data-transition="slidedown"><img src="images/swe.png"><img src="images/de.png"><img src="images/uk.png"></a></div>
 		</div><!-- /header -->
 		
 		<div data-role="content" id="main">
@@ -122,8 +122,8 @@
 	
 	<div data-role="page" id="insertCardMobile">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
-		<div data-role="content"><a href="#confirmMobile" data-role="button" data-icon="delete">Sätt in kort!</a></div>
-		<div data-role="footer"><a href="#start" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
+		<div data-role="content"><a href="#confirmMobile" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a></div>
+		<div data-role="footer"><a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
 	</div>
 
 	</div>
