@@ -54,6 +54,14 @@
 	});
 	</script>
 	
+	
+	<script language="javascript" type="text/javascript">
+	 function playSound(soundfile) {
+	 document.getElementById("dummy").innerHTML=
+	 "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+	 }
+	 </script>
+	
 </head>
 <body>
 	
@@ -63,6 +71,8 @@
 		<div data-role="header" id="header">
 			<div id="langBar"><a href="#noFunction" data-rel="dialog" data-transition="slidedown"><img src="images/swe.png"><img src="images/de.png"><img src="images/uk.png"></a></div>
 		</div><!-- /header -->
+		
+		<span id="dummy"></span>
 		
 		<div data-role="content" id="main">
 
