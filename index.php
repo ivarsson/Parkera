@@ -69,19 +69,24 @@
 	<div data-role="page" id="start">
 		
 		<div data-role="header" id="header">
-			<div id="langBar"><a href="#noFunction" data-rel="dialog" data-transition="slidedown"><img src="images/swe.png"><img src="images/de.png"><img src="images/uk.png"></a></div>
-		</div><!-- /header -->
+			<div id="langBar">
+				<a href="#noFunction" data-rel="dialog" data-transition="slidedown">
+					<img src="images/swe.png"><img src="images/de.png"><img src="images/uk.png">
+				</a>
+			</div>
+		</div>
+		<!-- /header -->
 		
 		<span id="dummy"></span>
 		
 		<div data-role="content" id="main">
 
-			<h1>Välkommen, välj ett alternativ</h1>
+			<h1>11 lediga parkeringar lediga.</br>Välj ett alternativ</h1>
 
-			<div class="buttonCont">
+			<div id="buttonCont">
 
-				<a href="#pay" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" onClick="window.location.reload()" data-role="button">Betala parkering</a>
-				<a href="#map" class="button" style="background-image:url('images/mapsIcon.png'); repeat:none;" onClick="window.location.reload()" data-role="button">Andra parkeringar i närheten</a>
+				<a href="#pay" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" data-role="button">Betala parkering</a>
+				<a href="#map" class="button" style="background-image:url('images/mapsIcon.png'); repeat:none;" data-role="button">Andra parkeringar i närheten</a>
 				<a href="#cycles" class="button" style="background-image:url('images/freeBikes.png'); repeat:none;" data-role="button">Lediga hyrcyklar i närheten</a>
 				<a href="#publicTrans" class="button" style="background-image:url('images/publicTransport.png'); repeat:none;" data-role="button">Kommande avgångar i kollektivtrafiken</a>
 			</div>
