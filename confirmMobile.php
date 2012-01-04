@@ -13,7 +13,7 @@
 	<h1>Bekräfta</h1>
 
 	<div class="button">
-		<label for="regnr">Registreringsnummer: </label>
+		<label for="regnr">Registreringsnummer (Ex. ABC123): </label>
 		<input type="text" name="regnr" id="regnr" />
 		<br />
 		<label for="telnr">Mobilnummer: </label>
@@ -30,10 +30,6 @@
 	</div>
 	
 	<div class="button" data-role="button">
-		Sätt in betalkort
-	</div>
-	
-	<div class="button" data-role="button">
 		KÖÖÖÖÖÖÖP!!!!!1
 	</div>
 
@@ -44,5 +40,7 @@
 <div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
 		<a class="back" href="#ticket" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
+		<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
+		<a class="forward" href="#donePopupSMS" data-rel="dialog" data-transition="slidedown" data-role="button" data-inline="true" data-icon="forward">Bekräfta köp</a>
 	</p>
 </div>

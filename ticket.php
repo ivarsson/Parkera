@@ -10,11 +10,14 @@
 </div>
 
 <div id="main">
+
+	<div id="buttonCont">
 		<h1>Tryck på det biljettalternativ du önskar</h1>
 
-	<a href="#insertCardMobile" class="button" style="background-image:url('images/paperTicket.png'); repeat:none;"  data-role="button" data-rel="dialog" data-transition="slidedown">Pappersbiljett</a>
+		<a href="#insertCardMobile" class="button" style="background-image:url('images/paperTicket.png'); 		repeat:none;" data-role="button" data-rel="dialog" data-transition="slidedown">Pappersbiljett</a>
 		<a href="#insertCardMobile" class="button" style="background-image:url('images/smsTicket.png'); repeat:none;" data-role="button" data-rel="dialog" data-transition="slidedown">SMS-biljett</a>
 
+	</div>
 </div>
 
 <div data-role="footer" data-theme="a" data-position="fixed">

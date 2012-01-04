@@ -63,6 +63,18 @@ h1 {
 	font-size: 50px;
 }
 
+#totalTime {
+	margin-left:10%;
+}
+
+#totalTime input {
+	width:400px;
+}
+
+#totalTime span {
+	font-size: 50px;
+}
+
 /***** END CHOOSE HOURS / MINS *****/
 
 

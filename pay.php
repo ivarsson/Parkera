@@ -11,7 +11,7 @@
 	
 <div data-role="fieldcontain" >
 
-	<h1>Dra i reglagen för att justera timmar och minuter</h1>
+	<h1>Kostnad: 20 SEK / timme</br> Dra i reglagen för att justera timmar och minuter</h1>
 
 
 	<form method="post">
@@ -29,11 +29,18 @@
 	</tr>
 	</table>
 	
+		<div id="totalTime">
+	<label for="slider">Parkeringstid t.o.m. </label>
+	<input type="text" id="tid" name="tid" readonly="readonly"/>
+	</div>
+	
+	
 	<div id="totalSum">
 	<label for="slider">Totalsumma: </label>
 	<input type="text" id="betala" name="betala" readonly="readonly" value="0"/>
 	<span>SEK</span>	
 	</div>
+	
 	
 </div>
 

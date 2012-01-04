@@ -11,6 +11,8 @@
 	<script src="jqueryMobile.js"></script>
 	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 	<script type="text/javascript" src="maps.js"></script>
+	<script src="DP_DateExtensions.js"></script>
+	
 	<script type="text/javascript" charset="utf-8">
 	
 	$.mobile.fixedToolbars
@@ -18,14 +20,29 @@
 	
 	$.mobile.fixedToolbars
 	   .show(true);
-	
+
+	var dateObj = new Date();
+	var currentTime = new Date();
+
 	var timeStore = {
         h:     undefined,
         m:     undefined,
         price: undefined,
+        time:  undefined,
+        
 	    getPrice: function() {
 	        return (this.h.val()*20) + parseInt((this.m.val()/3));
 	    },
+	    
+	    getTime: function() {
+	    	dateObj = currentTime.add(parseInt(this.h.val()), "hours");
+	    	dateObj = currentTime.add(parseInt(this.m.val()), "minutes");
+	        return (dateObj.timeFormat("H:mm") + " den " + dateObj.dateFormat("D/M"));
+	    },
+	    updateTime: function() {
+            console.log(this);
+            timeStore.time.val(timeStore.getTime());
+        },
         updatePrice: function() {
             console.log(this);
             timeStore.price.val(timeStore.getPrice());
@@ -34,6 +51,9 @@
             this.h     = $('#timmar');
             this.m     = $('#minuter');
             this.price =  $('#betala');
+            this.time  = $('#tid');
+            this.h.change(this.updateTime);
+            this.m.change(this.updateTime);
 	        this.h.change(this.updatePrice);
 	        this.m.change(this.updatePrice);
 	    }
@@ -53,7 +73,6 @@
 	
 	});
 	</script>
-	
 	
 	<script language="javascript" type="text/javascript">
 	 function playSound(soundfile) {
@@ -81,13 +100,13 @@
 		
 		<div data-role="content" id="main">
 
-			<h1>11 lediga parkeringar lediga.</br>Välj ett alternativ</h1>
+			<h1>11 parkeringar lediga, välj ett alternativ</h1>
 
 			<div id="buttonCont">
 
-				<a href="#pay" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" data-role="button">Betala parkering</a>
-				<a href="#map" class="button" style="background-image:url('images/mapsIcon.png'); repeat:none;" data-role="button">Andra parkeringar i närheten</a>
-				<a href="#cycles" class="button" style="background-image:url('images/freeBikes.png'); repeat:none;" data-role="button">Lediga hyrcyklar i närheten</a>
+				<a href="#pay" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" data-role="button" onClick="window.location.reload()">Betala parkering</a>
+				<a href="#map" class="button" style="background-image:url('images/mapsIcon.png'); repeat:none;" data-role="button" onClick="window.location.reload()">Andra parkeringar i närheten</a>
+				<a href="#cycles" class="button" style="background-image:url('images/freeBikes.png'); repeat:none;" data-role="button" onClick="window.location.reload()">Lediga hyrcyklar i närheten</a>
 				<a href="#publicTrans" class="button" style="background-image:url('images/publicTransport.png'); repeat:none;" data-role="button">Kommande avgångar i kollektivtrafiken</a>
 			</div>
 
@@ -101,6 +120,11 @@
 	<!-- Map page-->
 	<div data-role="page" id="map">
 		<?php include 'map.php'; ?>
+	</div>
+	
+	<!-- MapCycle page-->
+	<div data-role="page" id="cycles">
+		<?php include 'mapCycle.php'; ?>
 	</div>
 	
 	<!--Pay page-->
@@ -135,10 +159,18 @@
 		<div data-role="footer"><a href="#start" data-rel="back" data-role="button" data-inline="true" data-icon="delete">Stäng</a></div>
 	</div>
 	
+	<!--Insert card -->
 	<div data-role="page" id="insertCardMobile">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
 		<div data-role="content"><a href="#confirmMobile" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a></div>
 		<div data-role="footer"><a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
+	</div>
+
+	<!--Done-popupSMS-->
+	<div data-role="page" id="donePopupSMS">
+		<div data-role="header" data-theme="a">Tack!</div>
+		<div data-role="content">Köpet är nu genomfört. </br>Du kommer strax få ett SMS som bekräftelse på din betalning!</div>
+		<div data-role="footer"><a href="#start" data-role="button" data-inline="true" data-icon="delete">Stäng</a></div>
 	</div>
 
 	</div>
