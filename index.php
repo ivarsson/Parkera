@@ -25,9 +25,18 @@
 	$.mobile.fixedToolbars
 	   .show(true);
 
+	function checkValue() {
+		if (telnr.value > 1) {
+			
+			console.write("hej");
+		}
+	
+	}
+
+	// Slidersection //
+
 	var dateObj = new Date();
 	var currentTime = new Date();
-
 	var timeStore = {
         h:     undefined,
         m:     undefined,
@@ -65,6 +74,7 @@
 
 	$(function() { timeStore.init(); });
 
+		// Slidersection END //
 	
 	$(document).ready(function() {
 		

@@ -89,6 +89,46 @@ h1 {
 /***** END CHOOSE HOURS / MINS *****/
 
 
+/***** TABELL *****/
+
+#confirmTable {
+	width:800px;
+	display: inline-block;
+	margin: 0 auto;
+
+}
+
+#confirmTable h1 {
+	margin-bottom:3px;
+	margin-top:-5px;
+}
+
+#confirmTable h2 {
+	margin-top:0px;
+	margin-bottom: 0px;
+	font-size: 40px;
+	font-family: Arial;
+	font-weight: normal;
+}
+#confirmTable td {
+	width:50%;
+	padding:10px;
+	vertical-align: top;
+}
+
+#confirmTable input {
+	height:55px;
+	font-size: 50px;
+	text-align: center;
+	margin-top:10px;
+	margin-bottom: 20px;
+	color:#CCCCCC;
+	font-style: italic;
+}
+
+/***** SLUT TABELL *****/
+
+
 .button {
 	height: 200px;
 	width: 350px;
