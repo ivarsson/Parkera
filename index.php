@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable = no">
 	<meta name="apple-mobile-web-app-capable" content="yes" /> 
+	<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
 	<title>P-automat</title> 
 	<link rel="stylesheet" href="jqueryMobile.css" />
 	<link rel="stylesheet" href="style.css" />
@@ -14,6 +16,8 @@
 	<script src="DP_DateExtensions.js"></script>
 	
 	<script type="text/javascript" charset="utf-8">
+	
+	$(document).bind('touchmove', false);
 	
 	$.mobile.fixedToolbars
 	   .setTouchToggleEnabled(false);
@@ -163,7 +167,9 @@
 	<div data-role="page" id="insertCardMobile">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
 		<div data-role="content"><a href="#confirmMobile" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a></div>
-		<div data-role="footer"><a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
+		<div data-role="footer">
+		<a href="#start" data-role="button" data-rel="back" data-inline="true" data-icon="back">Tillbaka</a>
+		<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
 	</div>
 
 	<!--Done-popupSMS-->

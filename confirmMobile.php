@@ -10,28 +10,15 @@
 </div>
 
 <div id="main">
-	<h1>Bekräfta</h1>
+	<h1>Bekräfta köp</h1>
 
-	<div class="button">
 		<label for="regnr">Registreringsnummer (Ex. ABC123): </label>
 		<input type="text" name="regnr" id="regnr" />
 		<br />
 		<label for="telnr">Mobilnummer: </label>
 		<input type="text" name="telnr" id="telnr" />
 		<button type="button">Bekräfta</button>
-	</div>
-	
-	<div class="button">
-		<label for="time">Tid: </label>
-		<input type="text" name="time" id="time" />
-		<br />
-		<label for="price">Pris: </label>
-		<input type="text" name="price" id="price" />
-	</div>
-	
-	<div class="button" data-role="button">
-		KÖÖÖÖÖÖÖP!!!!!1
-	</div>
+
 
 
 

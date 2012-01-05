@@ -41,13 +41,35 @@ $(document).ready(function() {
 
 	// Add information window
 	var infowindow1 = new google.maps.InfoWindow({
-		content:  createInfo('Evoluted New Media','<br />asd')
+		content:  createInfo('Parkeringsplats 1','Ant. lediga platser: 50')
 	});
 
 	// Create information window
 	function createInfo(title, content) {
-		return '<div class="infowindow"><strong>'+ title +'</strong>'+content+'</div>';
+		return '<div class="infowindow"><strong>'+ title +'</strong><br/>'+content+'</div>';
 	};
+	
+	
+	
+	
+		// Add Marker
+	var marker2 = new google.maps.Marker({
+		position: new google.maps.LatLng(57.712722, 11.947289),
+		map: map,
+		icon: image,
+		animation: google.maps.Animation.DROP
+		 // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
+	});
+
+	// Add listener for a click on the pin
+	google.maps.event.addListener(marker2, 'click', function() {
+		infowindow2.open(map, marker2);
+	});
+
+	// Add information window
+	var infowindow2 = new google.maps.InfoWindow({
+		content:  createInfo('Parkeringsplats 2','Ant. lediga platser: 25')
+	});
 	
 	function toggleBounce() {
 
