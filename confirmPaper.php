@@ -10,27 +10,20 @@
 </div>
 
 <div id="main">
-	<h1>Bekräfta</h1>
+	<h1>Kontrollera uppgifterna och bekräfta köpet</h1>
 	
-	<div class="button">
-		<h2>Du har valt pappersbiljett</h2>
-	</div>
-	
-	<div class="button">
-		<label for="time">Tid: </label>
-		<input type="text" name="time" id="time" />
-		<br />
-		<label for="price">Pris: </label>
-		<input type="text" name="price" id="price" />
-	</div>
-	
-	<div class="button" data-role="button">
-		Sätt in betalkort
-	</div>
-	
-	<div class="button" data-role="button">
-		KÖÖÖÖÖÖÖP!!!!!1
-	</div>
+	<table id="confirmTable">
+		<tr>
+			<td>
+				<h1>Tid fram till:</h1>
+				<h2>15:30 21/1</h2></br>
+				<h1>Total kostnad:</h1>
+				<h2>120 SEK</h2></br>
+				<h1>Biljettyp:</h1>
+				<h2>Pappersbiljett</h2>
+			</td>
+		</tr>
+	</table>
 
 
 
@@ -39,5 +32,7 @@
 <div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
 		<a class="back" href="#ticket" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
+				<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
+		<a class="forward" href="#donePopupPaper" data-rel="dialog" data-transition="slidedown" data-role="button" data-inline="true" data-icon="forward" onclick="checkValue()">Bekräfta köp</a>
 	</p>
 </div>

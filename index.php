@@ -14,6 +14,17 @@
 	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 	<script type="text/javascript" src="maps.js"></script>
 	<script src="DP_DateExtensions.js"></script>
+
+	<script type="text/javascript" charset="utf-8">
+
+		function checkValue() {
+		if (parseInt(telnr.val()) > 1) {
+			
+			console.write("hej");
+			}
+		}
+	
+	</script>
 	
 	<script type="text/javascript" charset="utf-8">
 	
@@ -24,12 +35,6 @@
 	
 	$.mobile.fixedToolbars
 	   .show(true);
-
-	function checkValue() {
-		if (telnr.value > 1) {
-			
-			console.write("hej");
-		}
 	
 	}
 
@@ -173,20 +178,36 @@
 		<div data-role="footer"><a href="#start" data-rel="back" data-role="button" data-inline="true" data-icon="delete">Stäng</a></div>
 	</div>
 	
-	<!--Insert card -->
+	<!--Insert card Mobile-->
 	<div data-role="page" id="insertCardMobile">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
-		<div data-role="content"><a href="#confirmMobile" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a></div>
+		<div data-role="content">
+			<a href="#confirmMobile" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a>
+		</div>
+		<div data-role="footer">
+			<a href="#start" data-role="button" data-rel="back" data-inline="true" data-icon="back">Tillbaka</a>
+			<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a>
+		</div>
+	</div>
+	
+		<!--Insert card Paper-->
+	<div data-role="page" id="insertCardPaper">
+		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
+		<div data-role="content"><a href="#confirmPaper" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a></div>
 		<div data-role="footer">
 		<a href="#start" data-role="button" data-rel="back" data-inline="true" data-icon="back">Tillbaka</a>
 		<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
 	</div>
 
-	<!--Done-popupSMS-->
-	<div data-role="page" id="donePopupSMS">
+	<!--Done-popupPaper-->
+	<div data-role="page" id="donePopupPaper">
 		<div data-role="header" data-theme="a">Tack!</div>
-		<div data-role="content">Köpet är nu genomfört. </br>Du kommer strax få ett SMS som bekräftelse på din betalning!</div>
-		<div data-role="footer"><a href="#start" data-role="button" data-inline="true" data-icon="delete">Stäng</a></div>
+		<div data-role="content">
+			Köpet är nu genomfört. </br>Vänligen placera pappersbiljetten i bilens vindruta väl synlig.
+		</div>
+		<div data-role="footer">
+			<a href="#start" data-role="button" data-inline="true" data-icon="delete">Stäng</a>
+		</div>
 	</div>
 
 	</div>
