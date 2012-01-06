@@ -43,6 +43,8 @@ $(document).ready(function() {
 	var infowindow1 = new google.maps.InfoWindow({
 		content:  createInfo('Parkeringsplats 1','Ant. lediga platser: 50')
 	});
+	
+	var hejsan = "Hejhejehej";
 
 	// Create information window
 	function createInfo(title, content) {

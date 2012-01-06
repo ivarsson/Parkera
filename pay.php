@@ -25,7 +25,7 @@
 	
 	<tr>
 		<td><label for="minuter">Minuter: </label></td>
-		<td><input type="range" name="minuter" id="minuter" readonly="readonly" value="1" min="1" max="59"  /></td>
+		<td><input type="range" name="minuter" id="minuter" readonly="readonly" value="0" min="0" max="59"  /></td>
 	</tr>
 	</table>
 	

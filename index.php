@@ -36,7 +36,6 @@
 	$.mobile.fixedToolbars
 	   .show(true);
 	
-	}
 
 	// Slidersection //
 
@@ -210,6 +209,16 @@
 		</div>
 	</div>
 
+	<!--Done-popupSMS-->
+	<div data-role="page" id="donePopupSMS">
+		<div data-role="header" data-theme="a">Tack!</div>
+		<div data-role="content">
+			Köpet är nu genomfört. </br>Ett SMS kommer skickas till din mobiltelefon som bekräftelse på ditt köp.
+		</div>
+		<div data-role="footer">
+			<a href="#start" data-role="button" data-inline="true" data-icon="delete">Stäng</a>
+		</div>
+	</div>
 	</div>
 
 </body>
