@@ -26,15 +26,17 @@
 	}
 	
 	$(document).ready(function() {
-		$('#confirmTid').html(localStorage.getItem("tid"));
-		$("#confirmKostnad").html(localStorage.getItem("betala"));	
-		
+		$('.confirmTid').html(localStorage.getItem("tid"));
+		$(".confirmKostnad").html(localStorage.getItem("betala"));
+
 		$("#telnr").keyup(function() {
 			var value = $(this).val()
 			
 			if (value.match(/[^0-9]/)) {
-				$("#telNrFel").text("Ogiltligt mobilnummer, endast siffror (0-9) är tillåtet");
-				this.style.background='#FF4040';
+				if (value != "Ex. 0739982351") {
+					$("#telNrFel").text("Ogiltligt mobilnummer, endast siffror (0-9) är tillåtet");
+					this.style.background='#FF4040';					
+				}
 			}
 			else {
 				$("#telNrFel").text("");
