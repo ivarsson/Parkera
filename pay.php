@@ -30,14 +30,14 @@
 	</table>
 	
 		<div id="totalTime">
-	<label for="slider">Parkeringstid t.o.m. </label>
-	<input type="text" id="tid" name="tid" readonly="readonly"/>
+	<label for="slider">Parkeringstid t.o.m:</label>
+	<input type="text" id="tid" name="tid" value=" ---"readonly="readonly"/>
 	</div>
 	
 	
 	<div id="totalSum">
 	<label for="slider">Totalsumma: </label>
-	<input type="text" id="betala" name="betala" readonly="readonly" value="0"/>	
+	<input type="text" id="betala" name="betala" readonly="readonly" value="0 SEK"/>	
 	</div>
 	
 	

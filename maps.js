@@ -44,7 +44,6 @@ $(document).ready(function() {
 		content:  createInfo(parkInfo,'Ant. lediga platser: 50')
 	});
 	
-	var hejsan = "Hejhejehej";
 
 	// Create information window
 	function createInfo(title, content) {

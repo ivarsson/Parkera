@@ -93,10 +93,6 @@
 </head>
 <body>
 
-
-	<!-- Inlcude the API-connection and get parking info -->
-	<?php include 'parkinglots.php'; ?>
-	<?php $hej = 'ett litet test'; ?>
 	
 	<!-- Start of first page: #start -->
 	<div data-role="page" id="start">
