@@ -19,6 +19,7 @@
 				<input type="text" name="regnr" id="regnr" value="Ex. ABC123" onfocus="if (this.value == 'Ex. ABC123') {this.value=''; this.style.color='#000000';}" />
 				<h1>Mobilnummer:</h1>
 				<input type="text" name="telnr" id="telnr" value="Ex. 0739982351" onfocus="if (this.value == 'Ex. 0739982351') {this.value=''; this.style.color='#000000';}"/>
+				<h2 id="telNrFel"></h2>
 			</td>
 			
 			<td>
