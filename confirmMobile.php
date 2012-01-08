@@ -17,11 +17,11 @@
 			<td>
 				<h1>Registreringsnummer:</h1>
 				<input type="text" name="regnr" id="regnr" value="Ex. ABC123" onfocus="if (this.value == 'Ex. ABC123') {this.value=''; this.style.color='#000000';}" />
+				<h2 id="regNrFel"></h2>
 				<h1>Mobilnummer:</h1>
 				<input type="text" name="telnr" id="telnr" value="Ex. 0739982351" onfocus="if (this.value == 'Ex. 0739982351') {this.value=''; this.style.color='#000000';}"/>
 				<h2 id="telNrFel"></h2>
 			</td>
-			
 			<td>
 				<h1>Tid fram till:</h1>
 				<h2 class="confirmTid"></h2></br>
@@ -39,6 +39,6 @@
 	<p>
 		<a class="back" href="#ticket" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
 		<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
-		<a class="forward" href="#donePopupSMS" data-rel="dialog" data-transition="slidedown" data-role="button" data-inline="true" data-icon="forward">Bekräfta köp</a>
+		<a class="forward" onclick="return checkInput()" href="#"  data-rel="dialog" data-transition="slidedown" data-role="button" data-inline="true" data-icon="forward">Bekräfta köp</a>
 	</p>
 </div>

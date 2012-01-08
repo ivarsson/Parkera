@@ -29,13 +29,27 @@
 		$('.confirmTid').html(localStorage.getItem("tid"));
 		$(".confirmKostnad").html(localStorage.getItem("betala"));
 
-		$("#telnr").keyup(function() {
+		$("#regnr").keyup(function() {
 			var value = $(this).val()
 			
+			if (value.match(/[^A-z0-9 ]/)) {
+				if (value != "Ex. ABC123") {
+					$("#regNrFel").text("Ogiltligt Registreringsnummer, inga specialtecken är tillåtna");
+					this.style.background='#FF4040';					
+				}
+			}
+			else {
+				$("#regNrFel").text("");
+				this.style.background='';
+			}
+		}).keyup();
+		
+		$("#telnr").keyup(function() {
+			var value = $(this).val()
 			if (value.match(/[^0-9]/)) {
 				if (value != "Ex. 0739982351") {
 					$("#telNrFel").text("Ogiltligt mobilnummer, endast siffror (0-9) är tillåtet");
-					this.style.background='#FF4040';					
+					this.style.background='#FF4040';
 				}
 			}
 			else {
@@ -44,8 +58,21 @@
 			}
 		}).keyup();
 	});
-	</script>
 	
+	function checkInput() {
+		
+		alert("test");
+		
+		if ($('#telNrFel').text() == "") {
+			return false;
+			alert("false");
+		}
+		else {
+			return true;
+			alert("true");
+		}
+	}
+	</script>
 	<script type="text/javascript" charset="utf-8">
 	
 	$(document).bind('touchmove', false);
