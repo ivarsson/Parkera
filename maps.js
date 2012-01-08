@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 	// Add information window
 	var infowindow1 = new google.maps.InfoWindow({
-		content:  createInfo('Parkeringsplats 1','Ant. lediga platser: 50')
+		content:  createInfo(parkInfo,'Ant. lediga platser: 50')
 	});
 	
 	var hejsan = "Hejhejehej";
@@ -50,7 +50,6 @@ $(document).ready(function() {
 	function createInfo(title, content) {
 		return '<div class="infowindow"><strong>'+ title +'</strong><br/>'+content+'</div>';
 	};
-	
 	
 	
 	

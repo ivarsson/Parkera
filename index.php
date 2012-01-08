@@ -91,16 +91,18 @@
 	
 	});
 	</script>
-	
-	<script language="javascript" type="text/javascript">
-	 function playSound(soundfile) {
-	 document.getElementById("dummy").innerHTML=
-	 "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
-	 }
-	 </script>
+	 
+	 <script>
+	var parkInfo = "<?php include 'parkinglots.php'; ?>";
+	</script>
 	
 </head>
 <body>
+
+
+	<!-- Inlcude the API-connection and get parking info -->
+	<?php include 'parkinglots.php'; ?>
+	<?php $hej = 'ett litet test'; ?>
 	
 	<!-- Start of first page: #start -->
 	<div data-role="page" id="start">
