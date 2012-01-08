@@ -16,9 +16,9 @@
 		<tr>
 			<td>
 				<h1>Tid fram till:</h1>
-				<h2>15:30 21/1</h2></br>
+				<h2 id="confirmTid"></h2></br>
 				<h1>Total kostnad:</h1>
-				<h2>120 SEK</h2></br>
+				<h2 id="confirmKostnad"></h2></br>
 				<h1>Biljettyp:</h1>
 				<h2>Pappersbiljett</h2>
 			</td>
