@@ -1,4 +1,5 @@
-$(document).ready(function() {
+// page#maps
+$(document).delegate('#map', 'pageinit',function(event){
 
 	//------- Google Maps ---------//
 
@@ -25,25 +26,7 @@ $(document).ready(function() {
 		new google.maps.Point(5, 10)
 	);
 
-	// Add Marker
-	var marker1 = new google.maps.Marker({
-		position: new google.maps.LatLng(57.710306, 11.944825),
-		map: map,
-		icon: image,
-		animation: google.maps.Animation.DROP
-		 // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
-	});
-
-	// Add listener for a click on the pin
-	google.maps.event.addListener(marker1, 'click', function() {
-		infowindow1.open(map, marker1);
-	});
-
-	// Add information window
-	var infowindow1 = new google.maps.InfoWindow({
-		content:  createInfo(parkInfo,'Ant. lediga platser: 50')
-	});
-	
+	var infowindows = (new Array);
 
 	// Create information window
 	function createInfo(title, content) {
@@ -51,33 +34,30 @@ $(document).ready(function() {
 	};
 	
 	
-	
+	parkInfo.forEach(function (info) {
+
 		// Add Marker
-	var marker2 = new google.maps.Marker({
-		position: new google.maps.LatLng(57.712722, 11.947289),
-		map: map,
-		icon: image,
-		animation: google.maps.Animation.DROP
-		 // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
-	});
-
-	// Add listener for a click on the pin
-	google.maps.event.addListener(marker2, 'click', function() {
-		infowindow2.open(map, marker2);
-	});
-
-	// Add information window
-	var infowindow2 = new google.maps.InfoWindow({
-		content:  createInfo('Parkeringsplats 2','Ant. lediga platser: 25')
-	});
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(info.lat,info.long),
+			map: map,
+			icon: image,
+			animation: google.maps.Animation.DROP
+			// This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
+		});
 	
-	function toggleBounce() {
+		// Add information window
+		var infowindow = new google.maps.InfoWindow({
+			content:  createInfo(info.name,'Ant. lediga platser: ' + info.free)
+		});
+		
+		infowindows.push(infowindow);
+	
+		// Add listener for a click on the pin
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindows.forEach(function(w) { w.close(); });
+			infowindow.open(map, marker);
+		});
 
-	  if (marker1.getAnimation() != null) {
-	    marker1.setAnimation(null);
-	  } else {
-	    marker1.setAnimation(google.maps.Animation.BOUNCE);
-	  }
-	};
+	});
 
 });

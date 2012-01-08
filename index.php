@@ -58,9 +58,7 @@
 	
 
 	// Slidersection //
-
 	var dateObj = new Date();
-	var currentTime = new Date();
 	var timeStore = {
         h:     undefined,
         m:     undefined,
@@ -72,8 +70,8 @@
 	    },
 	    
 	    getTime: function() {
-	    	dateObj = currentTime.add(parseInt(this.h.val()), "hours");
-	    	dateObj = currentTime.add(parseInt(this.m.val()), "minutes");
+	    	dateObj = (new Date()).add(parseInt(this.h.val()), "hours");
+	    	dateObj = dateObj.add(parseInt(this.m.val()), "minutes");
 	        return (dateObj.timeFormat("H:mm") + " den " + dateObj.dateFormat("D/M"));
 	    },
 	    updateTime: function() {
@@ -96,13 +94,16 @@
 	    }
 	};
 
-	$(function() { timeStore.init(); });
+	// page#pay
+	$(document).delegate('#pay', 'pageinit',function(event){
+		timeStore.init();
+	});
 
-		// Slidersection END //
+	// Slidersection END //
 	</script>
 	 
 	 <script>
-	var parkInfo = "<?php include 'parkinglots.php'; ?>";
+	<?php include 'parkinglots.php'; ?>
 	</script>
 	
 </head>
@@ -129,9 +130,9 @@
 
 			<div id="buttonCont">
 
-				<a href="#pay" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" data-role="button" onClick="window.location.reload()">Betala parkering</a>
-				<a href="#map" class="button" style="background-image:url('images/mapsIcon.png'); repeat:none;" data-role="button" onClick="window.location.reload()">Andra parkeringar i närheten</a>
-				<a href="#cycles" class="button" style="background-image:url('images/freeBikes.png'); repeat:none;" data-role="button" onClick="window.location.reload()">Lediga hyrcyklar i närheten</a>
+				<a href="#pay" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" data-role="button">Betala parkering</a>
+				<a href="#map" class="button" style="background-image:url('images/mapsIcon.png'); repeat:none;" data-role="button">Andra parkeringar i närheten</a>
+				<a href="#cycles" class="button" style="background-image:url('images/freeBikes.png'); repeat:none;" data-role="button">Lediga hyrcyklar i närheten</a>
 				<a href="#publicTrans" class="button" style="background-image:url('images/publicTransport.png'); repeat:none;" data-role="button">Kommande avgångar i kollektivtrafiken</a>
 			</div>
 
