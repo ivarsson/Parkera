@@ -37,8 +37,7 @@
 	
 	<div id="totalSum">
 	<label for="slider">Totalsumma: </label>
-	<input type="text" id="betala" name="betala" readonly="readonly" value="0"/>
-	<span>SEK</span>	
+	<input type="text" id="betala" name="betala" readonly="readonly" value="0"/>	
 	</div>
 	
 	
@@ -49,7 +48,7 @@
 	<p>
 		<a class="back" href="#start" onClick="window.location.reload()" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
 		<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
-		<a class="forward" href="#ticket" onClick="window.location.reload()" data-rel="forward" data-role="button" data-inline="true" data-icon="forward">Nästa</a>
+		<a class="forward" href="#ticket" onClick="window.location.reload(), save()" data-rel="forward" data-role="button" data-inline="true" data-icon="forward">Nästa</a>
 	</p>
 	</form>
 </div>

@@ -17,13 +17,18 @@
 
 	<script type="text/javascript" charset="utf-8">
 
-		function checkValue() {
-		if (parseInt(telnr.val()) > 1) {
-			
-			console.write("hej");
-			}
-		}
+	function save() {
+		var tid = document.getElementById('tid').value;
+		var betala = document.getElementById('betala').value;
+		
+		localStorage.setItem("tid", tid);
+		localStorage.setItem("betala", betala);
+	}
 	
+	$(document).ready(function() {
+		$('#confirmTid').html(localStorage.getItem("tid"));
+		$("#confirmKostnad").html(localStorage.getItem("betala"));	
+	})
 	</script>
 	
 	<script type="text/javascript" charset="utf-8">
@@ -48,7 +53,7 @@
         time:  undefined,
         
 	    getPrice: function() {
-	        return (this.h.val()*20) + parseInt((this.m.val()/3));
+	        return ((this.h.val()*20) + parseInt((this.m.val()/3)) + " SEK");
 	    },
 	    
 	    getTime: function() {
@@ -79,17 +84,6 @@
 	$(function() { timeStore.init(); });
 
 		// Slidersection END //
-	
-	$(document).ready(function() {
-		
-		$("#mobile").click(function() {
-			$("#mobile").hide(1000, function() {
-				$("#smsTicket").show(1000);
-			});
-
-		});
-	
-	});
 	</script>
 	 
 	 <script>
