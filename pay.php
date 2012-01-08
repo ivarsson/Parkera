@@ -31,7 +31,7 @@
 	
 		<div id="totalTime">
 	<label for="slider">Parkeringstid t.o.m:</label>
-	<input type="text" id="tid" name="tid" value=" ---"readonly="readonly"/>
+	<input type="text" id="tid" name="tid" value=" ----"readonly="readonly"/>
 	</div>
 	
 	
