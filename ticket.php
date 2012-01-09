@@ -14,7 +14,7 @@
 	<div id="buttonCont">
 		<h1>Tryck på det biljettalternativ du önskar</h1>
 
-		<a href="#insertCardPaper" class="button" style="background-image:url('images/paperTicket.png'); 		repeat:none;" data-role="button" data-rel="dialog" data-transition="slidedown">Pappersbiljett</a>
+		<a href="#insertCardPaper" class="button" style="background-image:url('images/paperTicket.png'); repeat:none;" data-role="button" data-rel="dialog" data-transition="slidedown">Pappersbiljett</a>
 
 		<a href="#insertCardMobile" class="button" style="background-image:url('images/smsTicket.png'); repeat:none;" data-role="button" data-rel="dialog" data-transition="slidedown">SMS-biljett</a>
 
