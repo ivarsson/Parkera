@@ -1,5 +1,5 @@
 // page#maps
-$(document).delegate('#map', 'pageinit',function(event){
+$(document).delegate('#map', 'pageshow',function(event){
 
 	//------- Google Maps ---------//
 
@@ -26,13 +26,45 @@ $(document).delegate('#map', 'pageinit',function(event){
 		new google.maps.Point(5, 10)
 	);
 
+
 	var infowindows = (new Array);
 
 	// Create information window
-	function createInfo(title, content) {
+	var createInfo = function(title, content) {
 		return '<div class="infowindow"><strong>'+ title +'</strong><br/>'+content+'</div>';
 	};
 	
+	
+	var imageHere = new google.maps.MarkerImage('images/you-are-here.png',
+		// This marker is 129 pixels wide by 42 pixels tall.
+		new google.maps.Size(50, 50),
+		// The origin for this image is 0,0.
+		new google.maps.Point(0,0),
+		// The anchor for this image is the base of the flagpole at 18,42.
+		new google.maps.Point(5, 10)
+	);
+	
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(57.710600, 11.944900),
+		map: map,
+		icon: imageHere,
+		animation: google.maps.Animation.DROP
+		 // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
+	});
+	
+	
+	// Add information window2
+	var infowindow = new google.maps.InfoWindow({
+		content:  createInfo('Du är här!','')
+	});
+	
+	infowindows.push(infowindow);
+
+	// Add listener for a click on the pin2
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindows.forEach(function(w) { w.close(); });
+		infowindow.open(map, marker);
+	});
 	
 	parkInfo.forEach(function (info) {
 
@@ -59,5 +91,9 @@ $(document).delegate('#map', 'pageinit',function(event){
 		});
 
 	});
+	
+});
 
+$(document).delegate('#map', 'pagehide', function() {
+	$('#map_div').html("");
 });

@@ -23,7 +23,7 @@
 
 <div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
-		<a class="back" onClick="window.location.reload()" href="#pay" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
+		<a class="back" onClick="window.location.reload()" href="#pay" data-role="button" data-inline="true" data-icon="back" data-direction="reverse">Tillbaka</a>
 				<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
 	</p>
 </div>

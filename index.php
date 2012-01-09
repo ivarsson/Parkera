@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1.0, user-scalable = no">
 	<meta name="apple-mobile-web-app-capable" content="yes" /> 
-	<meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
 	<title>P-automat</title> 
 	<link rel="stylesheet" href="jqueryMobile.css" />
@@ -13,6 +13,7 @@
 	<script src="jqueryMobile.js"></script>
 	<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 	<script type="text/javascript" src="maps.js"></script>
+	<script type="text/javascript" src="mapsCycle.js"></script>
 	<script src="DP_DateExtensions.js"></script>
 
 	<script type="text/javascript" charset="utf-8">
