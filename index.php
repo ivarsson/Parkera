@@ -16,6 +16,12 @@
 	<script type="text/javascript" src="mapsCycle.js"></script>
 	<script src="DP_DateExtensions.js"></script>
 
+	<script type="text/javascript">
+   	function blockMove() {
+      event.preventDefault() ;
+	}
+	</script>
+	
 	<script type="text/javascript" charset="utf-8">
 
 	function save() {
@@ -26,11 +32,13 @@
 		localStorage.setItem("betala", betala);
 	}
 	
+	
 	var freeSpaces = 0;
 	
 	$(document).ready(function() {
-		$('.confirmTid').html(localStorage.getItem("tid"));
 		$('.confirmKostnad').html(localStorage.getItem("betala"));
+		$('.confirmTid').html(localStorage.getItem("tid"));
+
 		
 		$('#demo').text(freeSpaces);
 		$('#demoButton').click(function() {
@@ -177,7 +185,7 @@
 	</script>
 	
 </head>
-<body>
+<body ontouchmove="blockMove()">
 
 	
 	<!-- Start of first page: #start -->
@@ -198,7 +206,7 @@
 		<div data-role="content" id="main">
 			
 
-			<h1><span id="demo"></span> parkeringar lediga, välj ett alternativ</h1>
+			<h1>Lindholmens parkering<br><span id="demo"></span> parkeringar lediga, välj ett alternativ</h1>
 
 			<div id="buttonCont">
 
@@ -260,8 +268,8 @@
 	<!--NoneFreeSpaces popup-->
 	<div data-role="page" id="noneFreeSpaces">
 		<div data-role="header" data-theme="a">Det finns inga lediga parkeringsplatser just nu...</div>
-		<div data-role="content"><a href="#map" data-role="button" data-icon="next">Tryck här för att att se andra närliggande parkeringsplatser.</a></div>
-		<div data-role="content"><a href="#pay" data-role="button" data-icon="next">Tryck här för att fortsätta, om du ändå vill erlägga p-avgift!</a></div>
+		<div data-role="content"><a href="#map" data-role="button" data-icon="next">Tryck här för att att se närliggande parkeringsplatser.</a></div>
+		<div data-role="content"><a href="#pay" data-role="button" data-icon="next">Tryck här om du ändå vill erlägga p-avgift.</a></div>
 		<div data-role="footer">
 		<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
 	</div>
