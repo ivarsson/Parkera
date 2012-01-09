@@ -47,7 +47,7 @@
 <div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
 		<a class="back" href="#start" onClick="window.location.reload()" data-role="button" data-inline="true" data-icon="back" data-direction="reverse">Tillbaka</a>
-		<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
+		<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" onClick="window.location.reload()" data-icon="delete">Avbryt</a></span>
 		<a id="payForward" class="forward" href="#" onClick="save()" data-rel="forward" data-role="button" data-inline="true" data-icon="forward">Nästa</a>
 	</p>
 	</form>
