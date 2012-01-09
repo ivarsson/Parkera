@@ -36,8 +36,11 @@
 		$('#demoButton').click(function() {
 			if (freeSpaces == 0) {
 				freeSpaces = Math.floor(Math.random()*100);
+				document.getElementById('demo').style.color = 'black';
+
 			} else {
 				freeSpaces = 0;
+				document.getElementById('demo').style.color = 'red';
 			}
 			$('#demo').text(freeSpaces);
 		})
@@ -186,6 +189,7 @@
 					<img src="images/swe.png"><img src="images/de.png"><img src="images/uk.png">
 				</a>
 			</div>
+			<button id="demoButton">Demo</button>
 		</div>
 		<!-- /header -->
 		
@@ -193,7 +197,6 @@
 		
 		<div data-role="content" id="main">
 			
-			<button id="demoButton">Demo</button>
 
 			<h1><span id="demo"></span> parkeringar lediga, välj ett alternativ</h1>
 
@@ -256,8 +259,9 @@
 	
 	<!--NoneFreeSpaces popup-->
 	<div data-role="page" id="noneFreeSpaces">
-		<div data-role="header" data-theme="a">Inga lediga p-platser just nu</div>
-		<div data-role="content"><a href="#pay" data-role="button" data-icon="next">Klicka för att fortsätta, om du ändå vill erlägga p-avgift!</a></div>
+		<div data-role="header" data-theme="a">Det finns inga lediga parkeringsplatser just nu...</div>
+		<div data-role="content"><a href="#map" data-role="button" data-icon="next">Tryck här för att att se andra närliggande parkeringsplatser.</a></div>
+		<div data-role="content"><a href="#pay" data-role="button" data-icon="next">Tryck här för att fortsätta, om du ändå vill erlägga p-avgift!</a></div>
 		<div data-role="footer">
 		<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
 	</div>
