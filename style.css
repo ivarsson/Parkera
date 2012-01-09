@@ -4,6 +4,12 @@ Grupp 12 2011
 TIG061 - Projekt 2
 
 *******************/
+
+h3 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
 body {
 	height:768px;
 }

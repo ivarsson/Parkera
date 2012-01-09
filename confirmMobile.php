@@ -17,10 +17,10 @@
 			<td>
 				<h1>Registreringsnummer:</h1>
 				<input type="text" name="regnr" id="regnr" value="Ex. ABC123" onfocus="if (this.value == 'Ex. ABC123') {this.value=''; this.style.color='#000000';}" />
-				<h2 id="regNrFel"></h2>
+				<h3 id="regNrFel"></h3>
 				<h1>Mobilnummer:</h1>
 				<input type="text" name="telnr" id="telnr" value="Ex. 0739982351" onfocus="if (this.value == 'Ex. 0739982351') {this.value=''; this.style.color='#000000';}"/>
-				<h2 id="telNrFel"></h2>
+				<h3 id="telNrFel"></h3>
 			</td>
 			<td>
 				<h1>Tid fram till:</h1>
