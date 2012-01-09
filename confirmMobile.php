@@ -39,6 +39,6 @@
 	<p>
 		<a class="back" href="#ticket" data-role="button" data-inline="true" data-icon="back">Tillbaka</a>
 		<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
-		<a class="forward" onclick="return checkInput()" href="#"  data-rel="dialog" data-transition="slidedown" data-role="button" data-inline="true" data-icon="forward">Bekräfta köp</a>
+		<a id="confirmMobileButton" class="forward" href="#"  data-rel="dialog" data-transition="slidedown" data-role="button" data-inline="true" data-icon="forward">Bekräfta köp</a>
 	</p>
 </div>

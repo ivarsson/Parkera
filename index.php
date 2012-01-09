@@ -59,21 +59,42 @@
 		}).keyup();
 	});
 	
-	function checkInput() {
-		
-		alert("test");
-		
-		if ($('#telNrFel').text() == "") {
-			return false;
-			alert("false");
+	function checkSliderValue() {
+		if ($('#timmar').val() == "0" && $('#minuter').val() == "0") {
+			alert("Du måste ange hur länge du vill parkera");
 		}
 		else {
-			return true;
-			alert("true");
+			$.mobile.changePage('#ticket');
 		}
 	}
-	</script>
-	<script type="text/javascript" charset="utf-8">
+	
+	$(document).delegate('#payForward', 'tap', checkSliderValue);
+	
+	function checkSMSConfirm() {	
+		if ($('#regnr').val() == "Ex. ABC123") {
+			alert("Fyll i registreringnummer!");
+		}
+		else if ($('#regnr').val() == "") {
+			alert("Du måste fylla i ett registreringsnummer!");
+		}
+		else if ($('#telnr').val() == "Ex. 0739982351") {
+			alert("Fyll i ett telefonnummer!");
+		}
+		else if ($('#telnr').val() == "") {
+			alert("Du måste fylla i ett telefonnummer!");
+			return false;
+		}
+		else if ($("#telNrFel").text() == "Ogiltligt Registreringsnummer, inga specialtecken är tillåtna") {
+			alert("Ogiltligt Registreringsnummer, inga specialtecken är tillåtna");
+		}
+		else if ($("#telNrFel").text() == "Ogiltligt mobilnummer, endast siffror (0-9) är tillåtet") {
+			alert("Ogiltligt mobilnummer, endast siffror (0-9) är tillåtet");
+		}
+		else {
+			$.mobile.changePage('#donePopupSMS', {transition: "slidedown", role: "dialog"});
+		}
+	}
+	$(document).delegate('#confirmMobileButton', 'tap', checkSMSConfirm);
 	
 	$(document).bind('touchmove', false);
 	
@@ -127,9 +148,6 @@
 	});
 
 	// Slidersection END //
-	</script>
-	 
-	 <script>
 	<?php include 'parkinglots.php'; ?>
 	</script>
 	
