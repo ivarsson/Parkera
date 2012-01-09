@@ -26,10 +26,22 @@
 		localStorage.setItem("betala", betala);
 	}
 	
+	var freeSpaces = 0;
+	
 	$(document).ready(function() {
 		$('.confirmTid').html(localStorage.getItem("tid"));
-		$(".confirmKostnad").html(localStorage.getItem("betala"));
-
+		$('.confirmKostnad').html(localStorage.getItem("betala"));
+		
+		$('#demo').text(freeSpaces);
+		$('#demoButton').click(function() {
+			if (freeSpaces == 0) {
+				freeSpaces = Math.floor(Math.random()*100);
+			} else {
+				freeSpaces = 0;
+			}
+			$('#demo').text(freeSpaces);
+		})
+		
 		$("#regnr").keyup(function() {
 			var value = $(this).val()
 			
@@ -59,6 +71,17 @@
 			}
 		}).keyup();
 	});
+	
+	function checkFreeSpace() {
+		if (freeSpaces == 0) {
+			$.mobile.changePage('#noneFreeSpaces', {transition: "slidedown", role: "dialog"});
+		}
+		else {
+			$.mobile.changePage('#pay');
+		}
+	}
+	
+	$(document).delegate('#payButton', 'tap', checkFreeSpace);
 	
 	function checkSliderValue() {
 		if ($('#timmar').val() == "0" && $('#minuter').val() == "0") {
@@ -96,8 +119,6 @@
 		}
 	}
 	$(document).delegate('#confirmMobileButton', 'tap', checkSMSConfirm);
-	
-	$(document).bind('touchmove', false);
 	
 	$.mobile.fixedToolbars
 	   .setTouchToggleEnabled(false);
@@ -171,12 +192,14 @@
 		<span id="dummy"></span>
 		
 		<div data-role="content" id="main">
+			
+			<button id="demoButton">Demo</button>
 
-			<h1>11 parkeringar lediga, välj ett alternativ</h1>
+			<h1><span id="demo"></span> parkeringar lediga, välj ett alternativ</h1>
 
 			<div id="buttonCont">
 
-				<a href="#pay" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" data-role="button">Betala parkering</a>
+				<a id="payButton" href="#" class="button" style="background-image:url('images/payTicket.png'); repeat:none;" data-role="button">Betala parkering</a>
 				<a href="#map" class="button" style="background-image:url('images/mapsIcon.png'); repeat:none;" data-role="button">Andra parkeringar i närheten</a>
 				<a href="#cycles" class="button" style="background-image:url('images/freeBikes.png'); repeat:none;" data-role="button">Lediga hyrcyklar i närheten</a>
 				<a href="#publicTrans" class="button" style="background-image:url('images/publicTransport.png'); repeat:none;" data-role="button">Kommande avgångar i kollektivtrafiken</a>
@@ -231,6 +254,14 @@
 		<div data-role="footer"><a href="#start" data-rel="back" data-role="button" data-inline="true" data-icon="delete">Stäng</a></div>
 	</div>
 	
+	<!--NoneFreeSpaces popup-->
+	<div data-role="page" id="noneFreeSpaces">
+		<div data-role="header" data-theme="a">Inga lediga p-platser just nu</div>
+		<div data-role="content"><a href="#pay" data-role="button" data-icon="next">Klicka för att fortsätta, om du ändå vill erlägga p-avgift!</a></div>
+		<div data-role="footer">
+		<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
+	</div>
+	
 	<!--Insert card Mobile-->
 	<div data-role="page" id="insertCardMobile">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
@@ -243,7 +274,7 @@
 		</div>
 	</div>
 	
-		<!--Insert card Paper-->
+	<!--Insert card Paper-->
 	<div data-role="page" id="insertCardPaper">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
 		<div data-role="content"><a href="#confirmPaper" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a></div>
