@@ -31,7 +31,7 @@
 <div data-role="footer" data-theme="a" data-position="fixed">
 	<p>
 		<a class="back" href="#ticket" data-role="button" data-inline="true" data-icon="back" data-direction="reverse">Tillbaka</a>
-				<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete">Avbryt</a></span>
+				<span style="float:left; margin-left:350px;"><a class="cancel" href="#start" data-role="button" data-icon="delete" onClick="window.location.reload()">Avbryt</a></span>
 		<a class="forward" href="#donePopupPaper" data-rel="dialog" data-transition="slidedown" data-role="button" data-inline="true" data-icon="forward" onclick="checkValue()">Bekräfta köp</a>
 	</p>
 </div>

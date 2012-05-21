@@ -112,7 +112,7 @@ $(document).delegate('#cycles', 'pageshow',function(event){
 
 	// Add information window3
 	var infowindow3 = new google.maps.InfoWindow({
-		content:  createInfo('Styr & Ställ','</br>Antal platser: 10')
+		content:  createInfo('Styr & Ställ','</br>Lediga cyklar: 10')
 	});
 	
 	infowindows.push(infowindow3);

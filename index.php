@@ -94,6 +94,8 @@
 			var tid = document.getElementById('tid').value;
 			var betala = document.getElementById('betala').value;
 		
+			localStorage.removeItem("tid");
+			localStorage.removeItem("betala");
 			localStorage.setItem("tid", tid);
 			localStorage.setItem("betala", betala);
 			$.mobile.changePage('#ticket');
@@ -274,21 +276,21 @@
 	<div data-role="page" id="insertCardMobile">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
 		<div data-role="content">
-			<a href="#confirmMobile" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a>
+			<a href="#confirmMobile" data-role="button" data-icon="next" onClick="window.location.reload()">Tryck här för att sätta in kort!</a>
 		</div>
 		<div data-role="footer">
 			<a href="#start" data-role="button" data-rel="back" data-inline="true" data-icon="back">Tillbaka</a>
-			<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a>
+			<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete" onClick="window.location.reload()">Avbryt</a>
 		</div>
 	</div>
 	
 	<!--Insert card Paper-->
 	<div data-role="page" id="insertCardPaper">
 		<div data-role="header" data-theme="a">Sätt in ditt betalkort</div>
-		<div data-role="content"><a href="#confirmPaper" data-role="button" data-icon="next">Tryck här för att sätta in kort!</a></div>
+		<div data-role="content"><a href="#confirmPaper" data-role="button" data-icon="next" onClick="window.location.reload()">Tryck här för att sätta in kort!</a></div>
 		<div data-role="footer">
 		<a href="#start" data-role="button" data-rel="back" data-inline="true" data-icon="back">Tillbaka</a>
-		<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete">Avbryt</a></div>
+		<a href="#start" class="cancel" data-role="button" data-inline="true" data-icon="delete" onClick="window.location.reload()">Avbryt</a></div>
 	</div>
 
 	<!--Done-popupPaper-->
